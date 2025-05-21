@@ -1,8 +1,21 @@
-# Prompt for Implementing: UniverseGenesisSeed (UGS)
+# UniverseGenesisSeed (UGS) Implementation Prompt
 
-**Project:** Project Kósmos
-**Pillar:** I. The Cosmic Fabric Engine
-**Module:** 1. `UniverseGenesisSeed (UGS)`
+## Module Purpose
+Design and implement the UniverseGenesisSeed (UGS) module, which provides a single, master seed value (e.g., 64-bit or 128-bit integer) from which all deterministic procedural generation in the simulation originates. This seed enables the creation of shareable and reproducible universes.
+
+## Instructions for the LLM
+- Create a system that generates, stores, and manages a master seed value for the universe.
+- Ensure the seed can be user-specified or randomly generated, and is stored in a way that allows for exact reproduction of the same universe state.
+- The seed should be accessible to all other procedural generation modules (e.g., cosmological modeler, galaxy/planet/star generation, etc.).
+- Provide functions to:
+  - Set and retrieve the current universe seed.
+  - Serialize and deserialize the seed for saving/loading universes.
+  - Validate the seed (e.g., correct bit length, format).
+- Document the API and usage clearly, including how to share a universe by sharing its seed.
+- (Optional) Suggest best practices for integrating the seed system with other modules for deterministic procedural generation.
+
+## Reference (from Architecture)
+> A single, master seed value (e.g., 64-bit or 128-bit integer) from which all deterministic procedural generation originates. Output: Allows for shareable and reproducible universes.
 
 ## 1. Module Overview
 
